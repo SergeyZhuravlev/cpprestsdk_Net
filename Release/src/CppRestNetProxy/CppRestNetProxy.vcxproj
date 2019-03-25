@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{C8D6D021-A174-4534-9186-C7FB30255D66}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>CppRestNetProxy</RootNamespace>
+    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\Binaries\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\Binaries\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\Binaries\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\Binaries\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>CPPRESTPROXY_EXPORT;_WIN32;WININET_DISABLE_CHECK_SERVER_CERT_REVOCATION;WINVER=0x0501;_WIN32_WINNT=0x0501;CPPREST_FORCE_PPLX;CPPREST_TARGET_XP;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING=1;_HAS_TR1_NAMESPACE=1;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS=1;_HAS_AUTO_PTR_ETC=1;_HAS_TR2_SYS_NAMESPACE=1;_SILENCE_TR2_SYS_NAMESPACE_DEPRECATION_WARNING=1;WIN32</PreprocessorDefinitions>
+      <AdditionalOptions>-Zm300 /bigobj /Zc:threadSafeInit- /std:c++latest /Zc:implicitNoexcept- %(AdditionalOptions)</AdditionalOptions>
+	  <AdditionalIncludeDirectories>$(boost_include_path);$(CasablancaIncludeDir);$(CasablancaSrcDir)\pch;$(WebsocketppIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>CPPRESTPROXY_EXPORT;_WIN32;WININET_DISABLE_CHECK_SERVER_CERT_REVOCATION;WINVER=0x0501;_WIN32_WINNT=0x0501;CPPREST_FORCE_PPLX;CPPREST_TARGET_XP;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING=1;_HAS_TR1_NAMESPACE=1;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS=1;_HAS_AUTO_PTR_ETC=1;_HAS_TR2_SYS_NAMESPACE=1;_SILENCE_TR2_SYS_NAMESPACE_DEPRECATION_WARNING=1;WIN32</PreprocessorDefinitions>
+      <AdditionalOptions>-Zm300 /bigobj /Zc:threadSafeInit- /std:c++latest /Zc:implicitNoexcept- %(AdditionalOptions)</AdditionalOptions>
+	  <AdditionalIncludeDirectories>$(boost_include_path);$(CasablancaIncludeDir);$(CasablancaSrcDir)\pch;$(WebsocketppIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>CPPRESTPROXY_EXPORT;_WIN32;WININET_DISABLE_CHECK_SERVER_CERT_REVOCATION;WINVER=0x0501;_WIN32_WINNT=0x0501;CPPREST_FORCE_PPLX;CPPREST_TARGET_XP;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING=1;_HAS_TR1_NAMESPACE=1;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS=1;_HAS_AUTO_PTR_ETC=1;_HAS_TR2_SYS_NAMESPACE=1;_SILENCE_TR2_SYS_NAMESPACE_DEPRECATION_WARNING=1;WIN32</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>CPPRESTPROXY_EXPORT;_WIN32;WININET_DISABLE_CHECK_SERVER_CERT_REVOCATION;WINVER=0x0501;_WIN32_WINNT=0x0501;CPPREST_FORCE_PPLX;CPPREST_TARGET_XP;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING=1;_HAS_TR1_NAMESPACE=1;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS=1;_HAS_AUTO_PTR_ETC=1;_HAS_TR2_SYS_NAMESPACE=1;_SILENCE_TR2_SYS_NAMESPACE_DEPRECATION_WARNING=1;WIN32</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\cpprest\CppRestProxyExport.h" />
+    <ClInclude Include="..\..\include\cpprest\details\CpprestManagedTryCatch.h" />
+    <ClInclude Include="..\..\include\cpprest\details\HeadersMarshaller.h" />
+    <ClInclude Include="..\..\include\cpprest\details\http_request_proxy.h" />
+    <ClInclude Include="..\..\include\cpprest\details\http_response_proxy.h" />
+    <ClInclude Include="..\..\include\cpprest\details\HttpCppCliBridge.h" />
+    <ClInclude Include="..\..\include\cpprest\details\RequestProxyFriend.h" />
+    <ClInclude Include="..\..\include\cpprest\details\ResponseProxyFriend.h" />
+    <ClInclude Include="..\..\include\cpprest\details\streambuf_from_Stream.h" />
+    <ClInclude Include="..\..\include\cpprest\marshal_1251.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="HeadersMarshaller.cpp" />
+    <ClCompile Include="http_request_proxy.cpp" />
+    <ClCompile Include="http_response_proxy.cpp" />
+    <ClCompile Include="HttpCppCliBridge.cpp" />
+    <ClCompile Include="RequestProxyFriend.cpp" />
+    <ClCompile Include="ResponseProxyFriend.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="streambuf_from_Stream.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CppRestNative\CppRestNative.vcxproj">
+      <Project>{8316a57e-e06d-42b7-aee0-ad5ec51a1c8f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CppRestNetImpl\CppRestNetImpl.csproj">
+      <Project>{7ab39485-e104-4674-9bbb-048d79da7cda}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

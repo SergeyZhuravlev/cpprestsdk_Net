@@ -1,0 +1,22 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly CppRestNetProxy, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly CppRestNetImpl, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class web.http.details.HeadersMarshaller: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetRangeHeaders(http_headers* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetHeaders(http_headers* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    FillFromHeaders(http_headers* IsImplicitlyDereferenced, HttpWebRequest): PrivateScope, Public, HideBySig
+    getHeaders(http_headers*, WebHeaderCollection): PrivateScope, Public, HideBySig

@@ -1,6 +1,6 @@
 #pragma once
-#include <cpprest\CppRestNativeExport.h>
-#include <cpprest\details\basic_types.h>
+#include "..\..\include\cpprest\CppRestNativeExport.h"
+#include "..\..\include\cpprest\details\basic_types.h"
 
 namespace web::http::details
 {
@@ -11,7 +11,6 @@ namespace web::http::details
 	/// This class is to store common functionality so it isn't duplicated on
 	/// both the request and response side.
 	/// </summary>
-#include "warnings\dll_export_warnings_disable.h"
 	class CPPRESTNATIVE_API http_msg_native_base
 	{
 	public:
@@ -22,5 +21,4 @@ namespace web::http::details
 	private:
 		std::shared_ptr<HttpCppCliBridge> _httpCppCliBridge;
 	};
-#include "warnings\dll_export_warnings_restore.h"
 }

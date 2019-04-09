@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include "cpprest\http_exception.h"
-#include "cpprest\asyncrt_utils.h"
+#include "..\..\include\cpprest\http_exception.h"
+#include "..\..\include\cpprest\asyncrt_utils.h"
 
 /// <summary>
 /// Represents an HTTP error. This class holds an error message and an optional error code.

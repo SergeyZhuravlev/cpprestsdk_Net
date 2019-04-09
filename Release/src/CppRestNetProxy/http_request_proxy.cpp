@@ -1,15 +1,15 @@
 #include "stdafx.h"
-#include <cpprest/details/http_request_proxy.h>
-#include <cpprest\details\HttpCppCliBridge.h>
+#include "..\..\include\cpprest\details\http_request_proxy.h"
+#include "..\..\include\cpprest\details\HttpCppCliBridge.h"
 #include <msclr/marshal.h>
 #include <msclr\marshal_cppstd.h>
-#include "cpprest/http_client_config.h"
-#include "cpprestsdk_Net/Release/src/http/common/internal_http_helpers.h"
-#include "cpprest/details/CpprestManagedTryCatch.h"
-#include "cpprest/istreambuf_type_erasure.h"
-#include "cpprest/details/streambuf_from_Stream.h"
-#include "cpprest/details/RequestProxyFriend.h"
-#include "cpprest/details/ResponseProxyFriend.h"
+#include "..\..\include\cpprest\http_client_config.h"
+#include "..\..\include\cpprest\details\internal_http_helpers.h"
+#include "..\..\include\cpprest\details\CpprestManagedTryCatch.h"
+#include "..\..\include\cpprest\istreambuf_type_erasure.h"
+#include "..\..\include\cpprest\details\streambuf_from_Stream.h"
+#include "..\..\include\cpprest\details\RequestProxyFriend.h"
+#include "..\..\include\cpprest\details\ResponseProxyFriend.h"
 
 namespace web::http::details
 {

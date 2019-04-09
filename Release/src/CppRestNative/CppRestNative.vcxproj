@@ -97,7 +97,7 @@
       <PreprocessorDefinitions>CPPRESTNATIVE_EXPORT;_WIN32;WININET_DISABLE_CHECK_SERVER_CERT_REVOCATION;WINVER=0x0501;_WIN32_WINNT=0x0501;CPPREST_FORCE_PPLX;CPPREST_TARGET_XP;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING=1;_HAS_TR1_NAMESPACE=1;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS=1;_HAS_AUTO_PTR_ETC=1;_HAS_TR2_SYS_NAMESPACE=1;_SILENCE_TR2_SYS_NAMESPACE_DEPRECATION_WARNING=1;WIN32</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>-Zm300 /bigobj /Zc:threadSafeInit- /std:c++latest /Zc:implicitNoexcept- %(AdditionalOptions)</AdditionalOptions>
-	  <AdditionalIncludeDirectories>$(boost_include_path);$(CasablancaIncludeDir);$(CasablancaSrcDir)\pch;$(WebsocketppIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(zlib_include_path);$(boost_include_path);$(CasablancaIncludeDir);$(CasablancaSrcDir)\pch;$(WebsocketppIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -106,6 +106,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(zlib_lib_path);$(boost_lib_path)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -117,13 +118,14 @@
       <PreprocessorDefinitions>CPPRESTNATIVE_EXPORT;_WIN32;WININET_DISABLE_CHECK_SERVER_CERT_REVOCATION;WINVER=0x0501;_WIN32_WINNT=0x0501;CPPREST_FORCE_PPLX;CPPREST_TARGET_XP;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING=1;_HAS_TR1_NAMESPACE=1;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS=1;_HAS_AUTO_PTR_ETC=1;_HAS_TR2_SYS_NAMESPACE=1;_SILENCE_TR2_SYS_NAMESPACE_DEPRECATION_WARNING=1;WIN32</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>-Zm300 /bigobj /Zc:threadSafeInit- /std:c++latest /Zc:implicitNoexcept- %(AdditionalOptions)</AdditionalOptions>
-	  <AdditionalIncludeDirectories>$(boost_include_path);$(CasablancaIncludeDir);$(CasablancaSrcDir)\pch;$(WebsocketppIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(zlib_include_path);$(boost_include_path);$(CasablancaIncludeDir);$(CasablancaSrcDir)\pch;$(WebsocketppIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(zlib_lib_path);$(boost_lib_path)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -141,6 +143,7 @@
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
       <AdditionalDependencies>zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(zlib_lib_path);$(boost_lib_path)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -162,6 +165,7 @@
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
       <AdditionalDependencies>zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(zlib_lib_path);$(boost_lib_path)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

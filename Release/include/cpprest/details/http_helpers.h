@@ -15,8 +15,8 @@
 ****/
 #pragma once
 
-#include "cpprest/details/basic_types.h"
-#include "cpprest/CppRestNativeExport.h"
+#include "..\..\..\include\cpprest\details\basic_types.h"
+#include "..\..\..\include\cpprest\CppRestNativeExport.h"
 
 namespace web { namespace http
 {
@@ -29,7 +29,7 @@ namespace web { namespace http
 	public:
 #define _METHODS
 #define DAT(a,b) CPPRESTNATIVE_API const static method a;
-#include "cpprest/details/http_constants.dat"
+#include "..\..\..\include\cpprest\details\http_constants.dat"
 #undef _METHODS
 #undef DAT
 	};
@@ -42,7 +42,7 @@ namespace web { namespace http
 	public:
 #define _PHRASES
 #define DAT(a,b,c) CPPRESTNATIVE_API const static status_code a=b;
-#include "cpprest/details/http_constants.dat"
+#include "..\..\..\include\cpprest\details\http_constants.dat"
 #undef _PHRASES
 #undef DAT
 	};
@@ -55,7 +55,7 @@ namespace web { namespace http
 	public:
 #define _HEADER_NAMES
 #define DAT(a,b) CPPRESTNATIVE_API const static utility::string_t a;
-#include "cpprest/details/http_constants.dat"
+#include "..\..\..\include\cpprest\details\http_constants.dat"
 #undef _HEADER_NAMES
 #undef DAT
 	};
@@ -70,7 +70,7 @@ namespace web { namespace http
 		public:
 #define _MIME_TYPES
 #define DAT(a,b) CPPRESTNATIVE_API const static utility::string_t a;
-#include "cpprest/details/http_constants.dat"
+#include "..\..\..\include\cpprest\details\http_constants.dat"
 #undef _MIME_TYPES
 #undef DAT
 		};
@@ -83,7 +83,7 @@ namespace web { namespace http
 		public:
 #define _CHARSET_TYPES
 #define DAT(a,b) CPPRESTNATIVE_API const static utility::string_t a;
-#include "cpprest/details/http_constants.dat"
+#include "..\..\..\include\cpprest\details\http_constants.dat"
 #undef _CHARSET_TYPES
 #undef DAT
 		};

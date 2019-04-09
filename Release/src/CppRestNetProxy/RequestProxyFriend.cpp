@@ -1,10 +1,9 @@
 #include "stdafx.h"
-#include "cpprest/details/RequestProxyFriend.h"
-#include "cpprest/details/CpprestManagedTryCatch.h"
-#include "cpprest/details/HttpCppCliBridge.h"
-#include "cpprest/details/streambuf_from_Stream.h"
-#include "cpprest/details/http_request_proxy.h"
-#include "cpprestsdk_Net/Release/include/cpprest/details/http_request_proxy.h"
+#include "..\..\include\cpprest\details\RequestProxyFriend.h"
+#include "..\..\include\cpprest\details\CpprestManagedTryCatch.h"
+#include "..\..\include\cpprest\details\HttpCppCliBridge.h"
+#include "..\..\include\cpprest\details\streambuf_from_Stream.h"
+#include "..\..\include\cpprest\details\http_request_proxy.h"
 
 web::http::details::RequestProxyFriend::~RequestProxyFriend()
 {

@@ -17,7 +17,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\pplx\pplxwin.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\streams\fileio_win32.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\utilities\SystemCapability.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\websockets\client\ws_client_wspp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(MSBuildThisFileDirectory)..\utilities\Resource.rc" />

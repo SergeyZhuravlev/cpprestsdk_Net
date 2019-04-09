@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include "cpprest\http_headers.h"
-#include "cpprest\details\http_helpers.h"
+#include "..\..\include\cpprest\http_headers.h"
+#include "..\..\include\cpprest\details\http_helpers.h"
 
 namespace web {
 	namespace http

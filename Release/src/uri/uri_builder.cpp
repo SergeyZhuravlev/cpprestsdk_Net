@@ -12,7 +12,7 @@
 ****/
 
 #include "stdafx.h"
-#include "cpprest/uri_builder.h"
+#include "..\..\include\cpprest/uri_builder.h"
 
 namespace web
 {

@@ -12,7 +12,7 @@
 ****/
 
 #include "stdafx.h"
-#include "cpprest\details/http_helpers.h"
+#include "..\..\..\include\cpprest\details\http_helpers.h"
 
 // CPPREST_EXCLUDE_COMPRESSION is set if we're on a platform that supports compression but we want to explicitly disable it.
 // CPPREST_EXCLUDE_WEBSOCKETS is a flag that now essentially means "no external dependencies". TODO: Rename
@@ -34,9 +34,9 @@
 #include <zlib.h>
 #endif
 
-#include "cpprest\asyncrt_utils.h"
-#include "internal_http_helpers.h"
-#include "cpprest/http_exception.h"
+#include "..\..\..\include\cpprest\asyncrt_utils.h"
+#include "..\..\..\include\cpprest\details\internal_http_helpers.h"
+#include "..\..\..\include\cpprest\http_exception.h"
 #include <atomic>
 
 using namespace web;
@@ -48,13 +48,13 @@ namespace web { namespace http
 
 #define _METHODS
 #define DAT(a,b) const method methods::a = b;
-#include "cpprest/details/http_constants.dat"
+#include "..\..\..\include\cpprest\details\http_constants.dat"
 #undef _METHODS
 #undef DAT
 
 #define _HEADER_NAMES
 #define DAT(a,b) const utility::string_t header_names::a = _XPLATSTR(b);
-#include "cpprest/details/http_constants.dat"
+#include "..\..\..\include\cpprest\details\http_constants.dat"
 #undef _HEADER_NAMES
 #undef DAT
 
@@ -62,13 +62,13 @@ namespace details {
 
 #define _MIME_TYPES
 #define DAT(a,b) const utility::string_t mime_types::a = _XPLATSTR(b);
-#include "cpprest/details/http_constants.dat"
+#include "..\..\..\include\cpprest\details\http_constants.dat"
 #undef _MIME_TYPES
 #undef DAT
 
 #define _CHARSET_TYPES
 #define DAT(a,b) const utility::string_t charset_types::a = _XPLATSTR(b);
-#include "cpprest/details/http_constants.dat"
+#include "..\..\..\include\cpprest\details\http_constants.dat"
 #undef _CHARSET_TYPES
 #undef DAT
 
@@ -82,7 +82,7 @@ namespace details
 static const http_status_to_phrase idToPhraseMap [] = {
 #define _PHRASES
 #define DAT(a,b,c) {status_codes::a, c},
-#include "cpprest/details/http_constants.dat"
+#include "..\..\..\include\cpprest\details\http_constants.dat"
 #undef _PHRASES
 #undef DAT
 };
@@ -96,7 +96,7 @@ utility::string_t get_default_reason_phrase(status_code code)
     static const http_status_to_phrase idToPhraseMap [] = {
 #define _PHRASES
 #define DAT(a,b,c) {status_codes::a, c},
-#include "cpprest/details/http_constants.dat"
+#include "..\..\..\include\cpprest\details\http_constants.dat"
 #undef _PHRASES
 #undef DAT
     };

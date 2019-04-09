@@ -2,8 +2,8 @@
 #include <exception>
 #include <msclr\marshal.h>
 #include <msclr\marshal_cppstd.h>
-#include "pplx/task_canceled.h"
-#include "cpprest\http_exception.h"
+#include "..\..\include\pplx\task_canceled.h"
+#include "..\..\include\cpprest\http_exception.h"
 
 #define CPPREST_BEGIN_NATIVE_TRY try {
 

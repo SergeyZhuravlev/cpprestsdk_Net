@@ -21,8 +21,8 @@
 /*#include <locale.h>
 
 #include "pplx/pplxtasks.h"*/
-#include "cpprest/details/basic_types.h"
-#include "cpprest/CppRestNativeExport.h"
+#include "..\..\include\cpprest\details/basic_types.h"
+#include "..\..\include\cpprest\CppRestNativeExport.h"
 
 #if !defined(_WIN32) || (_MSC_VER >= 1700)
 #include <chrono>
@@ -39,7 +39,6 @@
 #endif
 
 /// Various utilities for string conversions and date and time manipulation.
-#include "warnings\dll_export_warnings_disable.h"
 namespace utility
 {
 
@@ -739,4 +738,3 @@ private:
 	}
 
 } // namespace utility;
-#include "warnings\dll_export_warnings_restore.h"

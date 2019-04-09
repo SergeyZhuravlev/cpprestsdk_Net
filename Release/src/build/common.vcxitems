@@ -17,7 +17,6 @@
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\http\client\http_client.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\http\client\http_client_msg.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\http\client\x509_cert_utilities.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\http\common\http_msg.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\json\json.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\json\json_parsing.cpp" />
@@ -27,8 +26,6 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\pplx\pplx.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\utilities\web_utilities.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\websockets\client\ws_client.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\websockets\client\ws_msg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectCapability Include="SourceItemsFromImports" />
@@ -41,6 +38,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\cpprest\details\http_msg_realization.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\cpprest\details\http_server.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\cpprest\details\http_server_api.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\cpprest\details\internal_http_helpers.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\cpprest\details\nosal.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\cpprest\details\resource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\cpprest\details\SafeInt3.hpp" />
@@ -65,8 +63,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\pplx\pplxconv.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\pplx\pplxinterface.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\pplx\pplxtasks.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\http\common\internal_http_helpers.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\websockets\client\ws_client_impl.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\pch\stdafx.h" />
   </ItemGroup>
 </Project>

@@ -11,7 +11,7 @@
 * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ****/
 #include "stdafx.h"
-#include "../common/internal_http_helpers.h"
+#include "..\..\include\cpprest\details\internal_http_helpers.h"
 #include <pplinterface.h>
 
 #undef min

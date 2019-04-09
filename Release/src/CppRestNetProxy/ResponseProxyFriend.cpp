@@ -1,8 +1,8 @@
 #include "stdafx.h"
-#include "cpprest/details/ResponseProxyFriend.h"
-#include "cpprest/details/CpprestManagedTryCatch.h"
-#include "cpprest/details/streambuf_from_Stream.h"
-#include "cpprest/details/http_response_proxy.h"
+#include "..\..\include\cpprest\details\ResponseProxyFriend.h"
+#include "..\..\include\cpprest\details\CpprestManagedTryCatch.h"
+#include "..\..\include\cpprest\details\streambuf_from_Stream.h"
+#include "..\..\include\cpprest\details\http_response_proxy.h"
 
 web::http::details::ResponseProxyFriend::~ResponseProxyFriend()
 {

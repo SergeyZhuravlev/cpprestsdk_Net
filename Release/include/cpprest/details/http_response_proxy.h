@@ -1,12 +1,11 @@
 #pragma once
-#include <cpprest\CppRestProxyExport.h>
+#include "..\..\include\cpprest\CppRestProxyExport.h"
 #include "http_response_base.h"
-#include "cpprest/http_headers.h"
-#include "cpprest/istreambuf_type_erasure.h"
+#include "..\..\include\cpprest\http_headers.h"
+#include "..\..\include\cpprest\istreambuf_type_erasure.h"
 
 namespace web::http::details
 {
-//#include "warnings\dll_export_warnings_disable.h"
 	class http_response_proxy : public http_response_base, public std::enable_shared_from_this<http_response_proxy>
 	{
 	public:
@@ -18,5 +17,4 @@ namespace web::http::details
 
 		CPPRESTPROXY_API ~http_response_proxy();
 	};
-//#include "warnings\dll_export_warnings_restore.h"
 }

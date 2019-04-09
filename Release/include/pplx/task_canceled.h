@@ -1,11 +1,10 @@
 #pragma once
 #include <exception>
 #include <string>
-#include <cpprest\CppRestNativeExport.h>
+#include "..\..\include\cpprest\CppRestNativeExport.h"
 
 namespace pplx
 {
-#include "warnings\dll_export_warnings_disable.h"
 	/// <summary>
 ///     This class describes an exception thrown by the PPL tasks layer in order to force the current task
 ///     to cancel. It is also thrown by the <c>get()</c> method on <see cref="task Class">task</see>, for a
@@ -37,5 +36,4 @@ namespace pplx
 		~task_canceled() throw ();
 		const char* what() const override;
 	};
-#include "warnings\dll_export_warnings_restore.h"
 }

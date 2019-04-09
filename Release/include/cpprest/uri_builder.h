@@ -17,7 +17,7 @@
 #include <string>
 #include <vector>
 
-#include "cpprest/base_uri.h"
+#include "..\..\include\cpprest\base_uri.h"
 
 namespace web
 {

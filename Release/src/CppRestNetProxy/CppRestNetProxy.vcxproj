@@ -95,12 +95,13 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CPPRESTPROXY_EXPORT;_WIN32;WININET_DISABLE_CHECK_SERVER_CERT_REVOCATION;WINVER=0x0501;_WIN32_WINNT=0x0501;CPPREST_FORCE_PPLX;CPPREST_TARGET_XP;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING=1;_HAS_TR1_NAMESPACE=1;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS=1;_HAS_AUTO_PTR_ETC=1;_HAS_TR2_SYS_NAMESPACE=1;_SILENCE_TR2_SYS_NAMESPACE_DEPRECATION_WARNING=1;WIN32</PreprocessorDefinitions>
       <AdditionalOptions>-Zm300 /bigobj /Zc:threadSafeInit- /std:c++latest /Zc:implicitNoexcept- %(AdditionalOptions)</AdditionalOptions>
-	  <AdditionalIncludeDirectories>$(boost_include_path);$(CasablancaIncludeDir);$(CasablancaSrcDir)\pch;$(WebsocketppIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(boost_include_path);$(CasablancaIncludeDir);$(CasablancaSrcDir)\pch;$(WebsocketppIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
       <SubSystem>Windows</SubSystem>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(zlib_lib_path);$(boost_lib_path)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -110,12 +111,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>CPPRESTPROXY_EXPORT;_WIN32;WININET_DISABLE_CHECK_SERVER_CERT_REVOCATION;WINVER=0x0501;_WIN32_WINNT=0x0501;CPPREST_FORCE_PPLX;CPPREST_TARGET_XP;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING=1;_HAS_TR1_NAMESPACE=1;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS=1;_HAS_AUTO_PTR_ETC=1;_HAS_TR2_SYS_NAMESPACE=1;_SILENCE_TR2_SYS_NAMESPACE_DEPRECATION_WARNING=1;WIN32</PreprocessorDefinitions>
       <AdditionalOptions>-Zm300 /bigobj /Zc:threadSafeInit- /std:c++latest /Zc:implicitNoexcept- %(AdditionalOptions)</AdditionalOptions>
-	  <AdditionalIncludeDirectories>$(boost_include_path);$(CasablancaIncludeDir);$(CasablancaSrcDir)\pch;$(WebsocketppIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(boost_include_path);$(CasablancaIncludeDir);$(CasablancaSrcDir)\pch;$(WebsocketppIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
       <SubSystem>Windows</SubSystem>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(zlib_lib_path);$(boost_lib_path)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -130,6 +132,7 @@
       <SubSystem>Windows</SubSystem>
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(zlib_lib_path);$(boost_lib_path)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -143,6 +146,7 @@
       <SubSystem>Windows</SubSystem>
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(zlib_lib_path);$(boost_lib_path)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

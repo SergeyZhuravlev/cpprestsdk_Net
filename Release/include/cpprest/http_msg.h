@@ -86,7 +86,6 @@ namespace details
 /// This class is to store common functionality so it isn't duplicated on
 /// both the request and response side.
 /// </summary>
-#include "warnings\dll_export_warnings_disable.h"
 template<class Base>
 class /*_ASYNCRTIMP*/ http_msg_base: public Base
 {
@@ -194,9 +193,8 @@ protected:
     /// <summary> The TCE is used to signal the availability of the message body. </summary>
     std::atomic<utility::size64_t> m_data_available = {};
 };
-#include "warnings\dll_export_warnings_restore.h"
 
-#include <cpprest\details\http_msg_realization.h>
+#include "..\..\include\cpprest\details\http_msg_realization.h"
 namespace 
 {
 	pplx::task<http_response> _http_response_to_http_response(std::weak_ptr<details::_http_response> response);

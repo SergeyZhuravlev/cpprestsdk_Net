@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include <cpprest\details\HttpCppCliBridge.h>
+#include "..\..\include\cpprest\details\HttpCppCliBridge.h"
 
 web::http::details::HttpCppCliBridge::HttpCppCliBridge(): headersMarshaller(gcnew HeadersMarshaller())
 {

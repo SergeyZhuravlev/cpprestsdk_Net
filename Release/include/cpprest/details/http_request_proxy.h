@@ -1,19 +1,18 @@
 #pragma once
-#include <cpprest\CppRestProxyExport.h>
+#include "..\..\include\cpprest\CppRestProxyExport.h"
 #include <memory>
 #include "http_request_base.h"
-#include <cpprest\details\http_msg_native_base.h>
-#include "cpprest/base_uri.h"
-#include "cpprest/http_client_config.h"
-#include "cpprest/http_headers.h"
+#include "..\..\include\cpprest\details\http_msg_native_base.h"
+#include "..\..\include\cpprest\base_uri.h"
+#include "..\..\include\cpprest\http_client_config.h"
+#include "..\..\include\cpprest\http_headers.h"
 #include "http_response_proxy.h"
-#include "cpprest/istreambuf_type_erasure.h"
+#include "..\..\include\cpprest/istreambuf_type_erasure.h"
 #include <optional>
 
 namespace web::http::details
 {
 	class _http_request;
-//#include "warnings\dll_export_warnings_disable.h"
 	class http_request_proxy : public http_request_base, public std::enable_shared_from_this<http_request_proxy>
 	{
 	public:
@@ -46,5 +45,4 @@ namespace web::http::details
 
 		std::weak_ptr<http::details::http_response_proxy> _response;
 	};
-//#include "warnings\dll_export_warnings_restore.h"
 }

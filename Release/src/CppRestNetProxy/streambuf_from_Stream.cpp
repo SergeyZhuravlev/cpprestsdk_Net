@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "cpprest/details/streambuf_from_Stream.h"
+#include "..\..\include\cpprest\details\streambuf_from_Stream.h"
 
 namespace Concurrency::streams::details
 {

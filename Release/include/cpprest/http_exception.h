@@ -1,10 +1,9 @@
 #pragma once
 #include <exception>
 #include <string>
-#include <cpprest/CppRestNativeExport.h>
-#include "cpprest\details\basic_types.h"
+#include "..\..\include\cpprest\CppRestNativeExport.h"
+#include "..\..\include\cpprest\details\basic_types.h"
 
-#include "warnings\dll_export_warnings_disable.h"
 class CPPRESTNATIVE_API http_exception : public std::exception
 {
 public:
@@ -69,7 +68,6 @@ private:
 	std::error_code m_errorCode;
 	std::string m_msg;
 };
-#include "warnings\dll_export_warnings_restore.h"
 
 namespace web::http
 {

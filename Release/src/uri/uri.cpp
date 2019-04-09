@@ -12,9 +12,9 @@
 ****/
 
 #include "stdafx.h"
-#include "cpprest\asyncrt_utils.h"
-#include "cpprest/base_uri.h"
-#include "cpprest/uri_builder.h"
+#include "..\..\include\cpprest\asyncrt_utils.h"
+#include "..\..\include\cpprest\base_uri.h"
+#include "..\..\include\cpprest\uri_builder.h"
 
 using namespace utility::conversions;
 

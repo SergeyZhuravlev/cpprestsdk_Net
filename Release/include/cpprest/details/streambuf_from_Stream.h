@@ -1,8 +1,8 @@
 #pragma once
-#include "cpprest/istreambuf_type_erasure.h"
+#include "..\..\include\cpprest\istreambuf_type_erasure.h"
 #include <optional>
 #include <msclr/gcroot.h>
-#include "cpprest/details/CpprestManagedTryCatch.h"
+#include "..\..\include\cpprest\details\CpprestManagedTryCatch.h"
 
 namespace Concurrency::streams::details
 {

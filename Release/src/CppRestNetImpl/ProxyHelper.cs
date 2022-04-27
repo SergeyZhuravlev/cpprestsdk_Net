@@ -9,7 +9,7 @@ namespace CppRest
 {
     public class ProxyHelper
     {
-        public static IWebProxy GetProxyNow(ITaxcomProxyInfo proxySettings)
+        public static IWebProxy GetProxyNow(IExtProxyInfo proxySettings)
         {
             IWebProxy proxy = null;
 
@@ -20,10 +20,10 @@ namespace CppRest
                 return proxy;
             }
 
-            if (proxySettings.Using == TaxcomProxyUsing.DontUseProxy)
+            if (proxySettings.Using == ExtProxyUsing.DontUseProxy)
                 return null;
 
-            if (proxySettings.Using == TaxcomProxyUsing.UseSystemProxyAddress)
+            if (proxySettings.Using == ExtProxyUsing.UseSystemProxyAddress)
             {
                 proxy = WebRequest.GetSystemWebProxy();
                 proxy.Credentials = null;
@@ -44,11 +44,11 @@ namespace CppRest
             return proxy;
         }
 
-        public static IWebProxy GetProxyCached(ITaxcomProxyInfo proxySettings)
+        public static IWebProxy GetProxyCached(IExtProxyInfo proxySettings)
         {
-            return TaxcomProxies.GetOrAdd(proxySettings, GetProxyNow);
+            return ExtProxies.GetOrAdd(proxySettings, GetProxyNow);
         }
 
-        private static readonly ConcurrentDictionary<ITaxcomProxyInfo, IWebProxy> TaxcomProxies = new ConcurrentDictionary<ITaxcomProxyInfo, IWebProxy>();
+        private static readonly ConcurrentDictionary<IExtProxyInfo, IWebProxy> ExtProxies = new ConcurrentDictionary<IExtProxyInfo, IWebProxy>();
     }
 }

@@ -11,7 +11,7 @@ namespace CppRestNetImpl
     public interface IRequestSettings
     {
         IProxyInfo ProxyInfo { get; }
-        ITaxcomProxyInfo TaxcomProxyInfo { get; }
+        IExtProxyInfo ExtProxyInfo { get; }
         TimeSpan? ReadTimeout { get; }
         TimeSpan? WriteTimeout { get; }
         TimeSpan? ConnectTimeout { get; }
@@ -22,7 +22,7 @@ namespace CppRestNetImpl
     public class RequestSettings: IRequestSettings
     {
         public IProxyInfo ProxyInfo { get; set; }
-        public ITaxcomProxyInfo TaxcomProxyInfo => ProxyInfo as ITaxcomProxyInfo;
+        public IExtProxyInfo ExtProxyInfo => ProxyInfo as IExtProxyInfo;
 
         public TimeSpan? ReadTimeout { get; set; }
         public TimeSpan? WriteTimeout { get; set; }

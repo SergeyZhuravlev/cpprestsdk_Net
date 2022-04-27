@@ -6,16 +6,16 @@ using System.Text;
 
 namespace CppRest
 {
-    public enum TaxcomProxyUsing
+    public enum ExtProxyUsing
     {
         DefaultBehavior = 0,
         DontUseProxy = 1,
         UseSystemProxyAddress = 2
     }
 
-    public interface ITaxcomProxyInfo: IEquatable<ITaxcomProxyInfo>
+    public interface IExtProxyInfo: IEquatable<IExtProxyInfo>
     {
-        TaxcomProxyUsing Using { get; }
+        ExtProxyUsing Using { get; }
         bool ProxyEnabled { get; }
         string ProxyServer { get; }
         int? ProxyPort { get; }
@@ -25,9 +25,9 @@ namespace CppRest
         string ProxyPassword { get; }
     }
 
-    public abstract class TaxcomProxyInfoBase : ITaxcomProxyInfo
+    public abstract class ExtProxyInfoBase : IExtProxyInfo
     {
-        public bool Equals(ITaxcomProxyInfo other)
+        public bool Equals(IExtProxyInfo other)
         {
             return (!(other is null) 
                     && Tuple.Create(Using, ProxyEnabled, ProxyServer, ProxyPort,
@@ -41,7 +41,7 @@ namespace CppRest
             return Tuple.Create(Using, ProxyEnabled, ProxyServer, ProxyPort, ProxyAuthorizationEnabled, ProxyDomain, ProxyLogin, ProxyPassword).GetHashCode();
         }
 
-        public abstract TaxcomProxyUsing Using { get; }
+        public abstract ExtProxyUsing Using { get; }
         public abstract bool ProxyEnabled { get; }
         public abstract string ProxyServer { get; }
         public abstract int? ProxyPort { get; }

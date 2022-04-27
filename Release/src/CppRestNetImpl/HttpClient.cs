@@ -99,8 +99,8 @@ namespace CppRestNetImpl
             _requestStreamLength = requestStreamLength;
             _responseExplicitStreamWriter = responseExplicitStreamWriter;
             _responseHolderSetter = responseHolderSetter ?? throw new ArgumentNullException(nameof(responseHolderSetter));
-            if (!(settings?.TaxcomProxyInfo is null))
-                _request.Proxy = ProxyHelper.GetProxyCached(settings?.TaxcomProxyInfo);
+            if (!(settings?.ExtProxyInfo is null))
+                _request.Proxy = ProxyHelper.GetProxyCached(settings?.ExtProxyInfo);
             var clientCertificateCollection = CertificateHelper.GetCachedCertificateCollection(settings?.ClientCertificates);
             if (!(clientCertificateCollection is null))
                 _request.ClientCertificates = clientCertificateCollection;

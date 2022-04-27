@@ -32,7 +32,7 @@ namespace CppRest
         string ProxyUriHostWithPort { get; }
     }
 
-    public class ProxyInfo: TaxcomProxyInfoBase, IProxyInfo
+    public class ProxyInfo: ExtProxyInfoBase, IProxyInfo
     {
         public ProxyInfo(ProxyMode mode, ICredentials credential, string proxyUriHostWithPort)
         {
@@ -46,12 +46,12 @@ namespace CppRest
                 {
                     if (credential is null)
                     {
-                        Using = TaxcomProxyUsing.DefaultBehavior;
+                        Using = ExtProxyUsing.DefaultBehavior;
                         ProxyEnabled = false;
                     }
                     else
                     {
-                        Using = TaxcomProxyUsing.UseSystemProxyAddress;
+                        Using = ExtProxyUsing.UseSystemProxyAddress;
                         ProxyEnabled = true;
                         ProxyAuthorizationEnabled = true;
                         ProxyLogin = GetLogin(credential.ProxyDomainWithLogin);
@@ -63,13 +63,13 @@ namespace CppRest
                     break;
                 case ProxyMode.Disabled:
                 {
-                    Using = TaxcomProxyUsing.DontUseProxy;
+                    Using = ExtProxyUsing.DontUseProxy;
                     ProxyEnabled = true;
                 }
                     break;
                 case ProxyMode.Manual:
                 {
-                    Using = TaxcomProxyUsing.DefaultBehavior;
+                    Using = ExtProxyUsing.DefaultBehavior;
                     var proxyEnabled = !string.IsNullOrEmpty(proxyUriHostWithPort);
                     if (proxyEnabled)
                     {
@@ -151,8 +151,8 @@ namespace CppRest
                 return null;
         }
 
-        #region TaxcomProxyInfo
-        public override TaxcomProxyUsing Using { get; }
+        #region ExtProxyInfo
+        public override ExtProxyUsing Using { get; }
         public override bool ProxyEnabled { get; }
         public override string ProxyServer { get; }
         public override int? ProxyPort { get; }
